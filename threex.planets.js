@@ -8,7 +8,7 @@ THREEx.Planets.baseURL	= '../'
 
 THREEx.Planets.createSun	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
-	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'images/sunmap.jpg')
+	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'./images/sunmap.jpg')
 	var material	= new THREE.MeshPhongMaterial({
 		map	: texture,
 		bumpMap	: texture,
@@ -43,9 +43,9 @@ THREEx.Planets.createVenus	= function(){
 THREEx.Planets.createEarth	= function(){
 	var geometry	= new THREE.SphereGeometry(0.45, 32, 32)
 	var material	= new THREE.MeshPhongMaterial({
-		map: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL +'images/8k_earth_daymap.jpg'),
+		map: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL +'./images/8k_earth_daymap.jpg'),
 		bumpScale	: 0.05,
-		specularMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'images/earthspec1k.jpg'),
+		specularMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'./images/earthspec1k.jpg'),
 		specular	: new THREE.Color('grey'),
 	})
 	var mesh	= new THREE.Mesh(geometry, material)
@@ -95,9 +95,9 @@ THREEx.Planets.createEarthCloud	= function(){
 			contextResult.putImageData(dataResult,0,0)	
 			material.map.needsUpdate = true;
 		})
-		imageTrans.src	= THREEx.Planets.baseURL+'images/earthcloudmaptrans.jpg';
+		imageTrans.src	= THREEx.Planets.baseURL+'./images/earthcloudmaptrans.jpg';
 	}, false);
-	imageMap.src	= THREEx.Planets.baseURL+'images/earthcloudmap.jpg';
+	imageMap.src	= THREEx.Planets.baseURL+'./images/earthcloudmap.jpg';
 
 	var geometry	= new THREE.SphereGeometry(0.46, 32, 32)
 	var material	= new THREE.MeshPhongMaterial({
